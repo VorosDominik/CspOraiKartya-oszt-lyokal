@@ -1,0 +1,1 @@
+# CspOraiKartya-oszt-lyokal
