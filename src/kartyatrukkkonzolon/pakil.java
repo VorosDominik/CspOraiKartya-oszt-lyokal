@@ -4,14 +4,32 @@
  */
 package kartyatrukkkonzolon;
 
+import java.util.Scanner;
+
 /**
  *
  * @author voros.dominik
+ * 
  */
+
+
+
+
 class pakil {
+    private static final Scanner sc = new Scanner(System.in);
      private static String[] pakli = new String[22];
+     
 
     public pakil() {
+        pakli=new String[22];
+        feltolt();
+        
+         for (int i = 0; i < 3; i++) {
+            kirak();
+            int oszlop = melyik();
+            kever(oszlop);
+        }
+        ezVolt();
         
     }
     
@@ -67,6 +85,16 @@ class pakil {
         }
         pakli = ujPakli;
          return oszlop;
+    }
+    private static int melyik() {
+        boolean jo;
+        int oszlop;
+        do {
+            System.out.print("melyik oszlop (1-3): ");
+            oszlop = sc.nextInt();
+            jo = oszlop >= 1 && oszlop <= 3;
+        } while (!jo);
+        return oszlop;
     }
 
     private void ezVolt() {

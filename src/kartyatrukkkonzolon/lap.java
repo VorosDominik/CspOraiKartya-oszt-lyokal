@@ -8,6 +8,26 @@ package kartyatrukkkonzolon;
  *
  * @author voros.dominik
  */
-class lap {
+
+class Lap {
+    private final String leiras;
+    
+    
+    
+    public Lap(String leiras){
+    this.leiras=leiras;
+     }
+
+    
+
+    public String getLeiras() {
+        return leiras;
+    }
+    
+    @Override
+    public String toString() {
+        return leiras;
+    }
+    
     
 }
